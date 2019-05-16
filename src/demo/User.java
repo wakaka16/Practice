@@ -1,5 +1,7 @@
 package demo;
 
+import java.util.Objects;
+
 /**
  * @Author wxl
  * @Date 2018/11/28
@@ -8,6 +10,7 @@ public class User implements Cloneable {
   private Person person;
 
   private String name;
+
 
   public String getName() {
     return name;

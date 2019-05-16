@@ -19,9 +19,7 @@ public class Observer1 extends Observer {
     //业务
     //将获取到的科目事件取出
     //获取得到的科目事件
-    System.out.println(subject.getEvent());
-    subject.getClass();
-    Class clazz;
+
 
   }
 }

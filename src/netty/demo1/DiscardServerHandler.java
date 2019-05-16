@@ -165,7 +165,7 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
       // 连接于com.vanda.im2.core.netty.WebSocketInboundServerHandler.handleWebSocketFrame
       // 2.1 ======
       case 1:
-        handleAcceptMessage(messageObject);
+//        handleAcceptMessage(messageObject);
         break;
       // 2.2 =====
       case 2:
@@ -177,35 +177,35 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
         break;
       // 2.4 =====
       case 4:
-        handleSendAckMessage(messageObject);
+//        handleSendAckMessage(messageObject);
         break;
       // 2.5 =====
       case 5:
-        handleSignInMessage(messageObject , ctx);
+//        handleSignInMessage(messageObject , ctx);
         break;
       // 2.6 =====
       case 6:
-        handleSignOutMessage(messageObject , ctx);
+//        handleSignOutMessage(messageObject , ctx);
         break;
       // 2.7 =====
       case 7:
-        this.handleVoiceCallTask(messageObject);
+//        this.handleVoiceCallTask(messageObject);
         break;
       // 2.8 =====
       case 8:
-        this.handleVoiceCallTask(messageObject);
+//        this.handleVoiceCallTask(messageObject);
         break;
       // 2.9 =====
       case 9:
-        this.handleVoiceResponseTask(messageObject);
+//        this.handleVoiceResponseTask(messageObject);
         break;
       // 2.10 =====
       case 10:
-        this.handleVoiceCancelledTask(messageObject);
+//        this.handleVoiceCancelledTask(messageObject);
         break;
       // 2.11 =====
       case -99:
-        handleSendHeartbeatAckMessage(messageObject);
+//        handleSendHeartbeatAckMessage(messageObject);
       default:
         break;
     }
