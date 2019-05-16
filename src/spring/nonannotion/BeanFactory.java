@@ -27,6 +27,8 @@ public class BeanFactory {
    */
   static{
 
+    //通过路径对比，我明白的这个包的意思
+    //包到内部一样会转化为路径进行访问（当然，在计算机中这是必须的）
     initBeanMap("D:/practice/se_test/src/spring/nonannotion/spring.xml");
   }
 
@@ -87,9 +89,8 @@ public class BeanFactory {
 
 
   public static void main(String[] args) {
-    String classFilePath = BeanFactory.class.getResource("/").getPath();
-    System.out.println(classFilePath);
-//    /D:/practice/se_test/out/production/se_test/
+    User user = (User)BeanFactory.getBean("user");
+    user.say();
 
   }
 }

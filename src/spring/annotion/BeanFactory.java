@@ -20,7 +20,8 @@ import spring.nonannotion.User;
 
 /**
  * @author wangxiaolong
- * @date 2019/5/16 14:15 spring bean 工程 非注解版spring ioc
+ * @date 2019/5/16 14:15
+ * spring bean 工程 注解版spring ioc
  */
 public class BeanFactory {
 
