@@ -1,4 +1,4 @@
-package spring.annotion;
+package spring.iocdi.annotion;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

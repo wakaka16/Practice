@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans>
-  <bean id="user" class="spring.nonannotion.User"/>
-  <bean id="goods" class="spring.nonannotion.Goods"/>
-</beans>

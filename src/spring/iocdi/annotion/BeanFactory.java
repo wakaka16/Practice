@@ -1,22 +1,9 @@
-package spring.annotion;
+package spring.iocdi.annotion;
 
 import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Field;
-import java.net.URL;
-import java.net.URLDecoder;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
-import org.dom4j.Document;
-import org.dom4j.DocumentException;
-import org.dom4j.Element;
-import org.dom4j.io.SAXReader;
-import spring.nonannotion.User;
 
 /**
  * @author wangxiaolong
@@ -36,8 +23,10 @@ public class BeanFactory {
   static {
 
     try {
-      initBeanMap("spring.annotion");
-      initBeanMap2("spring.annotion");
+      //加载完bean
+      loadBean("spring.annotion.iocdi");
+      //再加载属性
+      autoWired("spring.annotion.iocdi");
     } catch (ClassNotFoundException e) {
       e.printStackTrace();
     } catch (IllegalAccessException e) {
@@ -49,10 +38,10 @@ public class BeanFactory {
 
 
   /**
-   * 初始化bean容器（IOC）
+   * 加载bean，将bean放入beanFactory（IOC）
    * @param packageName 包路径
    */
-  public static void initBeanMap(String packageName)
+  private static void loadBean(String packageName)
       throws ClassNotFoundException, IllegalAccessException, InstantiationException {
     // 获取指定包下的文件
     String packageDirName = packageName.replace('.', '/');
@@ -92,13 +81,13 @@ public class BeanFactory {
   }
 
   /**
-   * 属性注入（DI）
+   * 将beanFactory中的属性注入（DI）
    * @param packageName 包路径
    * @throws ClassNotFoundException
    * @throws IllegalAccessException
    * @throws InstantiationException
    */
-  public static void initBeanMap2(String packageName)
+  private static void autoWired(String packageName)
       throws ClassNotFoundException, IllegalAccessException, InstantiationException {
     // 获取指定包下的文件
     String packageDirName = packageName.replace('.', '/');

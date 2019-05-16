@@ -1,4 +1,4 @@
-package spring.nonannotion;
+package spring.iocdi.nonannotion;
 
 import java.io.File;
 import java.util.List;
@@ -29,7 +29,7 @@ public class BeanFactory {
 
     //通过路径对比，我明白的这个包的意思
     //包到内部一样会转化为路径进行访问（当然，在计算机中这是必须的）
-    initBeanMap("D:/practice/se_test/src/spring/nonannotion/spring.xml");
+    loadBean("D:/practice/se_test/src/spring/iocdi/nonannotion/spring.xml");
   }
 
 
@@ -39,7 +39,7 @@ public class BeanFactory {
    *
    * @param path xml文件路径
    */
-  public static void initBeanMap(String path) {
+  private static void loadBean(String path) {
     //1、dom4j解析Xml文件
     SAXReader reader = new SAXReader();
     File file = new File(path);

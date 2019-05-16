@@ -1,4 +1,4 @@
-package spring.annotion;
+package spring.iocdi.annotion;
 
 /**
  * @author wangxiaolong
