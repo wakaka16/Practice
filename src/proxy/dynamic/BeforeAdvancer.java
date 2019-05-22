@@ -5,7 +5,8 @@ import java.lang.reflect.Proxy;
 
 /**
  * @Author wxl
- * @Date 2018/11/20 统一增强：例增强颜色
+ * @Date 2018/11/20
+ * 方法前增强器
  **/
 public class BeforeAdvancer extends Advancer {
 
@@ -25,7 +26,7 @@ public class BeforeAdvancer extends Advancer {
   @Override
   public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
     System.out.println("方法前增强");
-    method.invoke(super.target, args);
+    method.invoke(super.target);
     return null;
   }
 

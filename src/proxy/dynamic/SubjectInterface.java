@@ -6,5 +6,7 @@ package proxy.dynamic;
  */
 public interface SubjectInterface {
 
-  public void method();
+  void method();
+
+  void test();
 }

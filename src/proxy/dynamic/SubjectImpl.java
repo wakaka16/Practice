@@ -10,4 +10,9 @@ public class SubjectImpl implements SubjectInterface{
   public void method() {
     System.out.println("业务");
   }
+
+  @Override
+  public void test() {
+    System.out.println("TEST");
+  }
 }

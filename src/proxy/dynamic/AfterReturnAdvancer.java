@@ -6,8 +6,8 @@ import java.lang.reflect.Proxy;
 /**
  * @Author wxl
  * @Date 2018/11/20
- * 统一增强：例增强颜色
- **/
+ * 方法返回后增强器
+ * **/
 public class AfterReturnAdvancer extends Advancer {
 
 
